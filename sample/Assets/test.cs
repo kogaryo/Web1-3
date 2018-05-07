@@ -2,13 +2,64 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//public class Player
+//{
+//    private int hp = 100;
+//    private int power = 50;
+
+   
+//}
+
 public class test : MonoBehaviour {
 
+    int Add(int a,int b)
+    {
+        int c = a + b;
+        return c;
+    }
+    void SayHello()
+    {
+        Debug.Log("Hello");
+    }
+
+    void CallName(string name)
+    {
+        Debug.Log("Hello" + name);
+    }
+
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
+        SayHello();
+        CallName("Tom");
         //hello Worldを画面に表示
 		Debug.Log("Hello,World");
         int age;
+        int[] array = new int[5];
+        int[] points = { 83, 99, 52, 93, 15 };
+        int answer;
+
+        answer = Add(2, 3);
+        Debug.Log(answer);
+
+        array[0] = 2;
+        array[1] = 10;
+        array[2] = 5;
+        array[3] = 15;
+        array[4] = 3;
+
+        for(int j = 0;j<5;j++)
+        {
+            Debug.Log(array[j]);
+        }
+
+        for(int j=0;j<points.Length;j++)
+        {
+            if(points[j]>=90)
+            {
+                Debug.Log(points[j]);
+            }
+        }
 
         age = 30;
         Debug.Log(age);
